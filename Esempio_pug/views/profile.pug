@@ -1,20 +1,19 @@
 doctype html
 html
- head
-   title #{title}
-   link(rel='stylesheet', href='/css/style.css')
-   meta(name="viewport" content="width=device-width, initial-scale=1")
- body
-   header.header
-         h1 #{title}
-   div.profile
-     div.profile-image(style=`background: url('/images/${person.imgSrc}') top center no-repeat; background-size: cover;`)
-     div.profile-details
-       h1.profile-name
-         | #{person.firstname} #{person.lastname}
-       h2.profile-tagline
-         | #{person.tagline}
-       p.profile-bio
-         | #{person.bio}
-       a.button.button-twitter(href=`${person.twitter}`)
-         | Follow me on Twitte
+  head
+    title=title
+    link(rel='stylesheet', type='text/css', href='styles/styles.css')
+    link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css')
+  body
+    h1.homepage PROFILI
+    .container
+      .row
+        .col-md-4.d-flex.flex-column.align-items-center
+          img(src='public/styles/images/cristiano_ronaldo.jpg', alt='cristiano_ronaldo', class ='img-fluid img-cristiano_ronaldo')
+          a.button-cristiano_ronaldo.btn.btn-primary(href='/cristiano_ronaldo') cristiano ronaldo
+        .col-md-4.d-flex.flex-column.align-items-center
+          img(src='public/styles/images/.jpg', alt='Lionel_Messi', class ='img-fluid img-Lionel_Messi')
+          a.button-Lionel_Messi.btn.btn-primary(href='/Lionel_Messi') Lionel Messi
+        .col-md-4.d-flex.flex-column.align-items-center
+          img(src='public/styles/images/Neymar_Jr.jpg', alt='Neymar_Jr', class ='img-fluid img-Neymar_Jr')
+          a.button-Neymar_Jr.btn.btn-primary(href='/Neymar_Jr') Neymar Jr
